@@ -1,0 +1,51 @@
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+
+var rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+});
+console.log("Вітаю у додатку телефонна книга " + userName);
+var options = {
+    values: ["Створити новий", "Пошук контактів", "Вихід"],
+    selected: ">",
+};
+
+function renderMainMenu() {
+    cliSelect(options)
+        .then(function (res) {
+                switch (res.id) {
+                    case 0:
+                        createContact()
+                        break
+                    case 1:
+                        console.log('list');
+                        break;
+                    default:
+                }
+
+
+            }
+        }
+
+    function createContact() {
+        var contact = {}
+        prompt(" Введіть ім'я \n")
+            .then(function (answer) {
+                contact.name = answer
+
+            })
+        prompt(" Введіть номер телефону \n")
+            .then(function (answer) {
+                contact.phone = answer
+
+
+            })
+            .then(function (answer) {
+                console.log(contact, '2nd then')
+                renderMainMenu()
+            })
+            .catch(function (err) {
+                console.log(err)
+            })
+    }

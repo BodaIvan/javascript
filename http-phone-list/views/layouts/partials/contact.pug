@@ -1,0 +1,20 @@
+mixin contact(contact)
+  -
+    var id = contact.id || Math.floor(Math.random()*100 )
+    var avatar = contact.avatar&& contact.avatar.length ? contact.avatar : '/images/noimage.jpg' 
+    var name =contact.name ? contact.name : 'Alex'
+    var phone = contact.phone || '0999999999999'
+  .contact(data-id=id)
+    .contact--avatar
+      img(src=avatar)
+    .contact--name #{name}
+    .contact--phone #{phone}
+    .contact--actions
+      button
+        .icon.icon_phone
+      button
+        .icon.icon_pen
+      button
+        .icon.icon_
+      button
+        .icon.icon__

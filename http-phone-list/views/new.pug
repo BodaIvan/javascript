@@ -1,0 +1,14 @@
+extends ./layouts/main.pug
+block content
+    form.centered-form.form(action='create', method='post')
+        form--input
+            label
+                span iм'я
+                input(name='name', placeholder= 'Vvedit nazvu contactu')
+                span телефон
+                input(name='phone', placeholder= 'Vvedit telefon')
+                .form--submit
+                    button.button.button-sucsess save
+
+
+

@@ -1,0 +1,52 @@
+var a =10
+console.log(a)
+function drawLine(length, symbol)
+{
+	var line = ''
+	while(length>0){
+	length--
+	line+=symbol
+	
+	}
+	console.log(line)
+	
+}
+function drawTriangle(height, symbol, direction="from top to bottom")
+	{
+		if(direction=="from top to bottom"){
+			while(height>0){
+				drawLine(height, symbol)
+				height--
+			}}
+		else if(direction=="from bottom to top"){
+			var a=1
+				while(a<=height)
+			{
+				drawLine(a, symbol)
+				a++
+			}
+		
+			}
+		else {console.log("wrong parametr - 'direction'")}
+
+		
+	}
+//drawTriangle(7,'&','from bottom to to')
+function drawRectangle(height, width, symbol){
+		while (height>0){
+		drawLine(width, symbol)
+		height--
+	}
+}
+drawRectangle(4, 5, "4")
+//romb
+drawRomb(width, symbol){
+	var n=1
+	while(n<width)
+		{
+			
+
+		}
+
+
+}

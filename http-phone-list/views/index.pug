@@ -1,0 +1,11 @@
+extends ./layouts/main.pug
+include ./layouts/partials/contact
+block styles
+    link(rel="stylesheet" href="css/app.css") 
+block content
+    .contact-swiper
+        ul 
+            each contact in contacts
+                li=contact.name
+        each item in contacts
+            +contact(item)

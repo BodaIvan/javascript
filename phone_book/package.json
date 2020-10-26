@@ -1,0 +1,15 @@
+{
+  "name": "phone_book",
+  "version": "1.0.0",
+  "description": "",
+  "main": "zapusnuk.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cli-select": "^1.1.2",
+    "node-ask": "^1.0.1"
+  }
+}
